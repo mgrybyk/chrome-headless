@@ -5,14 +5,14 @@ Chrome headless with JDK, Maven, NodeJS
 
 You may build image with desired versions of JDK, Maven and NodeJS:
 - **JDK_MAVEN_NODE**=`mvn-3-jdk-8-node-10` see available versions - [jdk-maven-node](https://hub.docker.com/r/atools/jdk-maven-node/tags)
-- **CHROME_VERSION**=`latest`
+- **CHROME_VERSION**=`google-chrome-stable`
 
 ### Examples
 
 #### Command Line
 
-`docker build --build-arg JDK_MAVEN_NODE=mvn-3-jdk-8-node-10 --build-arg CHROME_VERSION=latest -f Dockerfile -t chrome .`
+`docker build --build-arg JDK_MAVEN_NODE=mvn-3-jdk-8-node-10 --build-arg CHROME_VERSION=google-chrome-stable -f Dockerfile -t chrome .`
 
 #### Jenkins Pipeline
 
-`docker.build('chrome', '--build-arg JDK_MAVEN_NODE=mvn-3-jdk-8-node-10 --build-arg CHROME_VERSION=latest -f Dockerfile .')`
+`docker.build('chrome', '--build-arg JDK_MAVEN_NODE=mvn-3-jdk-8-node-10 --build-arg CHROME_VERSION=google-chrome-stable -f Dockerfile .')`
