@@ -1,6 +1,10 @@
 # chrome-headless
 Chrome headless with JDK, Maven, NodeJS
 
+## Updates
+
+Image updates after one week since Chrome release according to [Chrome Release Timeline](https://www.chromestatus.com/features/schedule).
+
 ## Build
 
 You may build image with desired versions of JDK, Maven and NodeJS:
