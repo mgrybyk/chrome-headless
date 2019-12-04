@@ -1,4 +1,4 @@
-ARG JDK_MAVEN_NODE=latest
+ARG JDK_MAVEN_NODE=mvn3-jdk8-node12
 
 FROM atools/jdk-maven-node:${JDK_MAVEN_NODE}
 USER root
