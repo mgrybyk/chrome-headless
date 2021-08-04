@@ -1,0 +1,18 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        NODE_VERSION: [12,14,16]
+        JAVA_VERSION: [11]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Docker build and publish
+        env:
+          DOCKER_TAG: java${JAVA_VERSION}-node${NODE_VERSION}-latest
+        run: echo ${DOCKER_TAG}
