@@ -1,20 +1,23 @@
-name: Docker Image CI
+name: Chrome Docker Image
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron:  '0 0 * * TUE'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        MVN_VERSION: [3]
         NODE_VERSION: [12,14,16]
         JAVA_VERSION: [11]
     steps:
       - uses: actions/checkout@v2
       - name: Docker build and publish
         env:
-          MVN_VERSION: 3
+          MVN_VERSION: ${{ matrix.MVN_VERSION }}
           JAVA_VERSION: ${{ matrix.JAVA_VERSION }}
           NODE_VERSION: ${{ matrix.NODE_VERSION }}
           DOCKER_IMAGE_TAG: atools/chrome-headless:java${{ matrix.JAVA_VERSION }}-node${{ matrix.NODE_VERSION }}-latest
