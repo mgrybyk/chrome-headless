@@ -4,7 +4,7 @@ Chrome headless with JDK, Maven, NodeJS
 
 ## Updates
 
-Image updates after one week of every new Chrome release according to [Chrome Release Timeline](https://www.chromestatus.com/features/schedule).
+The image updates every week on Tuesday.
 
 ## Build
 
