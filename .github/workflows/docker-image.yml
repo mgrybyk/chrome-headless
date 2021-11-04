@@ -3,7 +3,7 @@ name: Chrome Docker Image
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 0 * * TUE'
+    - cron:  '0 0 3 * *'
 
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
       matrix:
         MVN_VERSION: [3]
         NODE_VERSION: [12,14,16]
-        JAVA_VERSION: [11]
+        JAVA_VERSION: [11,17]
     steps:
       - uses: actions/checkout@v2
       - name: Docker build and publish
