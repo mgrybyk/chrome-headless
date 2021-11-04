@@ -12,7 +12,7 @@ jobs:
       matrix:
         MVN_VERSION: [3]
         NODE_VERSION: [12,14,16]
-        JAVA_VERSION: [11,17]
+        JAVA_VERSION: [11]
     steps:
       - uses: actions/checkout@v2
       - name: Docker build and publish
