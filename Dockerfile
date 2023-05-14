@@ -1,4 +1,4 @@
-ARG JDK_MAVEN_NODE=mvn3-jdk11-node14
+ARG JDK_MAVEN_NODE=jdk17-nodelts
 
 FROM atools/jdk-maven-node:${JDK_MAVEN_NODE}
 USER root
