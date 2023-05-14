@@ -16,8 +16,8 @@ You may build image with desired versions of JDK, Maven and NodeJS:
 
 #### Command Line
 
-`docker build --build-arg JDK_MAVEN_NODE=mvn3-jdk11-node14 --build-arg CHROME_VERSION=google-chrome-stable -f Dockerfile -t chrome .`
+`docker build --build-arg JDK_MAVEN_NODE=jdk17-nodelts --build-arg CHROME_VERSION=google-chrome-stable -f Dockerfile -t chrome .`
 
 #### Jenkins Pipeline
 
-`docker.build('chrome', '--build-arg JDK_MAVEN_NODE=mvn3-jdk11-node14 --build-arg CHROME_VERSION=google-chrome-stable -f Dockerfile .')`
+`docker.build('chrome', '--build-arg JDK_MAVEN_NODE=jdk17-nodelts --build-arg CHROME_VERSION=google-chrome-stable -f Dockerfile .')`
