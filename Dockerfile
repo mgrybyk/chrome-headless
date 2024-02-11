@@ -14,6 +14,8 @@ RUN \
     rm -f /etc/apt/sources.list.d/google-chrome.list && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
+RUN echo "" && echo "chrome-headless IS DEPRECATED!" && echo ""
+
 # "fake" dbus address to prevent errors
 # https://github.com/SeleniumHQ/docker-selenium/issues/87
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
